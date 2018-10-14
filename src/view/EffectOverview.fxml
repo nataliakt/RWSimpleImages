@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#focusTextField" prefHeight="600.0" prefWidth="600.0" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EffectOverviewController">
+   <children>
+      <AnchorPane layoutX="30.0" layoutY="110.0" prefHeight="80.0" prefWidth="600.0" style="-fx-border-radius: 2; -fx-background-radius: 2; -fx-background-color: #fff;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label fx:id="imageName" alignment="CENTER" contentDisplay="CENTER" text="imagem" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="9.0" left="9.0" right="9.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+            <HBox alignment="CENTER" layoutY="36.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="2.0">
+                     <children>
+                        <Label text="ID" />
+                        <Label fx:id="imageId" text="P3">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox alignment="CENTER" spacing="2.0">
+                     <children>
+                        <Label text="Largura" />
+                        <Label fx:id="imageWidth" text="300">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox alignment="CENTER" spacing="2.0">
+                     <children>
+                        <Label text="Altura" />
+                        <Label fx:id="imageHeight" text="400">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <VBox alignment="CENTER" spacing="2.0">
+                     <children>
+                        <Label text="Máximo" />
+                        <Label fx:id="imageMax" text="255">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Button mnemonicParsing="false" onAction="#handleView" prefHeight="60.0" prefWidth="60.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="button-blue" />
+            <String fx:value="button-image" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Ver Imagem Original" />
+         </tooltip>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="195.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleHistogram" prefHeight="60.0" prefWidth="60.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="button-pink" />
+            <String fx:value="button-chart" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Gerar Histograma" />
+         </tooltip>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button layoutX="462.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleDownload" prefHeight="60.0" prefWidth="60.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="button-green" />
+            <String fx:value="button-download" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Baixar imagem com Efeito" />
+         </tooltip>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-border-radius: 2; -fx-background-radius: 2; -fx-background-color: #fff;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Efeitos" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="9.0" left="9.0" right="9.0" top="9.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+            <TextField fx:id="filter" layoutX="1.0" layoutY="27.0" onInputMethodTextChanged="#filterLoad" onKeyPressed="#filterLoad" onKeyReleased="#filterLoad" onKeyTyped="#filterLoad" promptText="Buscar" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+               <tooltip>
+                  <Tooltip text="Buscar Efeito" />
+               </tooltip></TextField>
+            <TableView fx:id="effectTable" prefHeight="200.0" prefWidth="550.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="70.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" sortable="false" text="Nome" />
+                  <TableColumn fx:id="toColumn" prefWidth="75.0" sortable="false" text="Para" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Button layoutX="530.0" layoutY="530.0" mnemonicParsing="false" onAction="#handleReturn" prefHeight="60.0" prefWidth="60.0" stylesheets="@../resources/style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="button-red" />
+            <String fx:value="button-return" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Voltar para Imagens" />
+         </tooltip>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="529.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleDescription" prefHeight="60.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button-indigo" />
+                  <String fx:value="button-description" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="Descrição do Efeito" />
+               </tooltip>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleViewEffect" prefHeight="60.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button-purple" />
+                  <String fx:value="button-star" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="Ver Imagem com Efeito" />
+               </tooltip>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleDownloadEffect" prefHeight="60.0" prefWidth="60.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button-green" />
+                  <String fx:value="button-download" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="Baixar imagem com Efeito" />
+               </tooltip>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <Button layoutX="520.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="button-pink" />
+            <String fx:value="button-save" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Download da Imagem com Efeito" />
+         </tooltip>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,90 @@
+Button {
+	-fx-background-radius: 100.0%;
+	-fx-border-radius: 100.0%;
+}
+
+.button-info:hover{
+	-fx-opacity: 0.9;
+}
+
+.button-green{
+	-fx-background-color: #4CAF50;
+}
+.button-green:hover{
+	-fx-background-color: #66BB6A;
+}
+
+.button-indigo{
+	-fx-background-color: #3F51B5;
+}
+.button-indigo:hover{
+	-fx-background-color: #5C6BC0;
+}
+
+.button-pink{
+	-fx-background-color: #E91E63;
+}
+.button-pink:hover{
+	-fx-background-color: #EC407A;
+}
+
+.button-red{
+	-fx-background-color: #F44336;
+}
+.button-red:hover{
+	-fx-background-color: #EF5350;
+}
+
+.button-purple{
+	-fx-background-color: #9C27B0;
+}
+.button-purple:hover{
+	-fx-background-color: #AB47BC;
+}
+
+.button-blue{
+	-fx-background-color: #2196F3;
+}
+.button-blue:hover{
+	-fx-background-color: #42A5F5;
+}
+
+.button-add > ImageView{
+	-fx-image: url("../resources/add.png");
+}
+.button-close > ImageView{
+	-fx-image: url("../resources/close.png");
+}
+.button-chart > ImageView{
+	-fx-image: url("../resources/chart.png");
+}
+.button-description > ImageView{
+	-fx-image: url("../resources/description.png");
+}
+.button-download > ImageView{
+	-fx-image: url("../resources/download.png");
+}
+.button-edit > ImageView{
+	-fx-image: url("../resources/edit.png");
+}
+.button-effect > ImageView{
+	-fx-image: url("../resources/effect.png");
+}
+.button-image > ImageView{
+	-fx-image: url("../resources/image.png");
+}
+.button-next > ImageView{
+	-fx-image: url("../resources/next.png");
+}
+.button-return > ImageView{
+	-fx-image: url("../resources/return.png");
+}
+.button-save > ImageView{
+	-fx-image: url("../resources/save.png");
+}
+.button-star > ImageView{
+	-fx-image: url("../resources/star.png");
+}
+.button-upload > ImageView{
+	-fx-image: url("../resources/upload.png");
+}
